@@ -54,7 +54,7 @@ def fn_cos_calc(h,omega_m,omega_k,omega_lambda,z):
 	elif (omega_k>0.0): #POSITIVELY CURVED
 		d_t = d_h/math.sqrt(omega_k) * math.sinh(math.sqrt(omega_k)*d_c/d_h)
 	else: #NEGATIVELY CURVED
-		d_t = d_h/math.sqrt(abs(omega_k)) * math.sinh(math.sqrt(abs(omega_k))*d_c/d_h)
+		d_t = d_h/math.sqrt(abs(omega_k)) * math.sin(math.sqrt(abs(omega_k))*d_c/d_h)
 
 	if (omega_lambda==0.0): #UNIVERSE WITHOUT COS. CONSTANT / DARK ENERGY
 		d_t = d_h * 2 *(2 - (omega_m *(1-z)) - ((2-omega_m) * (math.sqrt(1+(omega_m*z))))) / (omega_m**2 * (1+z))
